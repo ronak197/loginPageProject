@@ -1,5 +1,6 @@
 package com.loginpage.loginpage;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -30,5 +31,10 @@ public class registration extends AppCompatActivity {
         String type = "register";
         backgroundWorker bckwokr = new backgroundWorker(this);
         bckwokr.execute(type,firstname,lastname,age,username,password);
+    }
+
+    public void tologin(View view){
+        Intent openloginintent = new Intent(this,MainLoginScreen.class);
+        startActivity(openloginintent);
     }
 }
